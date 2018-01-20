@@ -1,8 +1,8 @@
-findHotelOnMyTrip
+FindHotelOnMyTrip
 =================
 
 ## 介紹
-findHotelOnMyTrip 是一個方便的訂飯店利器,  
+FindHotelOnMyTrip 是一個方便的訂飯店利器,  
 使用者選定飯店與多個指定日期, 執行後即可連續開啟多個Agoda分頁, 讓使用者比較出最便宜的飯店期間！
 
 ## 如何使用
@@ -43,4 +43,4 @@ end_date_array = (
 Python 2.7.x  
 
 ## License
-findHotelOnMyTrip is published under the MIT license.  
+FindHotelOnMyTrip is published under the MIT license.  
