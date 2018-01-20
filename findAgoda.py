@@ -23,8 +23,8 @@ def openChrome(url):
 def openURL(url):
     print url
     #openFireFox(url)
-    openChrome(url)
-    #webbrowser.open(url)
+    #openChrome(url)
+    webbrowser.open(url)
 
 def searchAgoda(hotel_url, start_date, end_date):
     url = hotel_url + '?asq=po6ZHZDWWQw%2B%2FNWjtL2wyEIBVzxVr3Usfk%2BlO0TKWNPsgt%2FLx7KfgAWQoa0tSVVAsPUuZxWRo%2BsE8kZJRYTQrn06ACOynX1AJPuHjMmDgFtEa7m4uCVDk%2BwQ64TmXAc%2F4paTD5VHq5sFdVCiCn7snsm4QEc3A1%2FkQoR7ruhEPcHr9u9qwCQVnA3DW6YPDC6lvJqpW%2F81SfForBExjjE3wA%3D%3D&hotel=461942&cid=-209&tick=636362431996&pagetypeid=7&origin=TW&tag=&gclid=&aid=130589&userId=0641beca-ec99-455e-beb1-06c05995bb58&languageId=20&sessionId=3q1mkzzzfkf4rrlf4jhg5atg&storefrontId=3&currencyCode=TWD&htmlLanguage=zh-tw&trafficType=User&cultureInfoName=zh-TW&checkIn=' + \
