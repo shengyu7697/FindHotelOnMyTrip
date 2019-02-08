@@ -6,13 +6,13 @@ import os
 import webbrowser
 
 def usage(cmd):
-    print '-' * 50
-    print '訂飯店利器'
-    print '尋找Agoda上指定的飯店與多個指定日期, 比較出最便宜的期間！'
-    print ''
-    print 'usage:'
-    print './%s' % cmd
-    print '-' * 50
+    print('-' * 50)
+    print('訂飯店利器')
+    print('尋找Agoda上指定的飯店與多個指定日期, 比較出最便宜的期間！')
+    print('')
+    print('usage:')
+    print('./%s' % cmd)
+    print('-' * 50)
 
 def openFireFox(url):
     webbrowser.get('firefox').open_new_tab(url)
@@ -21,7 +21,7 @@ def openChrome(url):
     webbrowser.get('google-chrome').open_new_tab(url)
 
 def openURL(url):
-    print url
+    print(url)
     #openFireFox(url)
     #openChrome(url)
     webbrowser.open(url)
@@ -62,7 +62,7 @@ def searchAgodaMultipleDates():
     zipped = zip(start_date_array, end_date_array)
     for i, j in zipped:
         searchAgoda(hotel_url, i, j)
-    print 'Hotel URL: ' + hotel_url
+    print('Hotel URL: ' + hotel_url)
 
 def main():
     if len(sys.argv) > 1:
