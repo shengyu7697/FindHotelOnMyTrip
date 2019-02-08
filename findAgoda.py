@@ -34,7 +34,7 @@ def searchAgoda(hotel_url, start_date, end_date):
     openURL(url)
 
 def searchAgodaMultipleDates():
-    #hotel_name='toyoko-inn-hakata-guchi-ekimae' # 東橫INN博多口站前 (Toyoko Inn Hakata-guchi Ekimae) agoda 7.9
+    hotel_name='toyoko-inn-hakata-guchi-ekimae' # 東橫INN博多口站前 (Toyoko Inn Hakata-guchi Ekimae) agoda 7.9
     #hotel_name='toyoko-inn-hakata-guchi-ekimae-no-2' # 東橫INN博多口站前2 (Toyoko Inn Hakata-guchi Ekimae No.2) agoda 8.2
     #hotel_name='toyoko-inn-hakata-eki-minami' # 東橫INN博多站南 (Toyoko Inn Hakata-eki Minami) agoda 7.7
     #hotel_name='toyoko-inn-hakata-ekimae-gion' # 東橫INN博多站前祇園 (Toyoko Inn Hakata Ekimae Gion) agoda 7.9
@@ -43,10 +43,8 @@ def searchAgodaMultipleDates():
     #hotel_name='super-hotel-hakata' # 博多超級酒店 (Super Hotel Hakata) agoda 7.8
     #hotel_name='sutton-hotel-hakata-city' # 博多城市Sutton飯店 (Sutton Hotel Hakata City) agoda 8.1
     #hotel_name='hotel-areaone-hakata' # AreaOne飯店 - 博多 (Hotel Areaone Hakata) agoda 7.6
-    hotel_name='hotel-centraza-hakata' # 博多中央飯店 (Hotel Centraza Hakata) agoda 7.8
 
     city='fukuoka-jp' # 福岡
-    #city='saga-jp' # 佐賀
 
     hotel_url='https://www.agoda.com/zh-tw/' + hotel_name + '/hotel/' + city + '.html'
     

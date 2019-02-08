@@ -18,12 +18,12 @@ python findAgoda.py
 就會自動連續開啟選定的飯店與選定日期的頁面！  
 
 #### 例如：  
-以下修改範例為選定 "日本福岡" 的 "博多中央飯店",  
+以下修改範例為選定 "日本福岡" 的 "東橫INN博多口站前",  
 日期選定 "2017-10-20 ~ 2017-10-21",  
 "2017-10-21 ~ 2017-10-22",  
 "2017-10-22 ~ 2017-10-23" 這三種日期組合.  
 ```
-hotel_name="hotel-centraza-hakata" # 博多中央飯店
+hotel_name="toyoko-inn-hakata-guchi-ekimae" # 東橫INN博多口站前
 city="fukuoka-jp" # 福岡
 start_date_array = (
   '2017-10-20',
