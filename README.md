@@ -8,7 +8,7 @@ FindHotelOnMyTrip 是一個方便的訂飯店利器,
 Demo on ubuntu.  
 ![demo](https://raw.github.com/shengyu7697/FindHotelOnMyTrip/master/demo.gif)  
 
-## 如何使用
+## 如何使用 findAgoda.py
 修改 findAgoda.py 內 的hotel_name、 city、start_date_array 和 end_date_array 變數  
 之後執行本程式  
 ```
@@ -40,7 +40,7 @@ end_date_array = (
 使用者可自行新增各種日期的組合來查詢, 藉此找到最便宜的飯店期間!  
 
 ## 系統需求
-可以執行Python的系統  
+可以執行Python2 或 Python3 的系統  
 
 ## 開發環境
 Python 2.7.x  
