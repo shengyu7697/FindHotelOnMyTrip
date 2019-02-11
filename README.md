@@ -10,6 +10,14 @@ Demo on ubuntu.
 
 [Youtube Demo](https://youtu.be/-5ohd0JO2io)  
 
+## 安裝相依套件
+安裝必要的第三方套件
+* PyQt5
+
+```
+pip3 install -r requirements.txt
+```
+
 ## 如何使用 findAgoda-gui.py
 執行程式  
 ```
