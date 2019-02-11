@@ -5,6 +5,9 @@ FindHotelOnMyTrip
 FindHotelOnMyTrip 是一個方便的訂飯店利器,  
 使用者選定飯店與多個指定日期, 執行後即可連續開啟多個Agoda分頁, 讓使用者比較出最便宜的飯店期間！  
 
+Demo on ubuntu.  
+![demo](https://raw.github.com/shengyu7697/FindHotelOnMyTrip/master/demo.gif)  
+
 ## 如何使用
 修改 findAgoda.py 內 的hotel_name、 city、start_date_array 和 end_date_array 變數  
 之後執行本程式  
