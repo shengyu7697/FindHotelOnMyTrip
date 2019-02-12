@@ -21,6 +21,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setWindowTitle('FindAgoda-gui')
         self.ui.statusbar.showMessage('Ready.')
 
+        self.setMenuAction()
         self.setConnections()
         self.setCompleter(self.ui.hotelLineEdit)
         self.initTable()
@@ -30,6 +31,17 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.searchButton.setEnabled(False)
 
         self.show()
+
+    def setMenuAction(self):
+        self.ui.actionExit.triggered.connect(self.close)
+        self.ui.actionLicense.triggered.connect(self.showLicense)
+        self.ui.actionAbout.triggered.connect(self.showAbout)
+
+    def showLicense(self):
+        QtWidgets.QMessageBox.information(self, 'License', '')
+
+    def showAbout(self):
+        QtWidgets.QMessageBox.information(self, 'About', '')
 
     def setConnections(self):
         self.ui.addButton.clicked.connect(self.addBtnEvent)

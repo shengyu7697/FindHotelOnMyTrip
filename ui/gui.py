@@ -163,11 +163,14 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
-        self.actionLinsence = QtWidgets.QAction(MainWindow)
-        self.actionLinsence.setObjectName("actionLinsence")
+        self.actionLicense = QtWidgets.QAction(MainWindow)
+        self.actionLicense.setObjectName("actionLicense")
         self.actionAbout = QtWidgets.QAction(MainWindow)
         self.actionAbout.setObjectName("actionAbout")
-        self.menuHelp.addAction(self.actionLinsence)
+        self.actionExit = QtWidgets.QAction(MainWindow)
+        self.actionExit.setObjectName("actionExit")
+        self.menuFile.addAction(self.actionExit)
+        self.menuHelp.addAction(self.actionLicense)
         self.menuHelp.addAction(self.actionAbout)
         self.menubar.addAction(self.menuFile.menuAction())
         self.menubar.addAction(self.menuHelp.menuAction())
@@ -230,8 +233,9 @@ class Ui_MainWindow(object):
         self.exitButton.setText(_translate("MainWindow", "Exit"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.menuHelp.setTitle(_translate("MainWindow", "Help"))
-        self.actionLinsence.setText(_translate("MainWindow", "License"))
+        self.actionLicense.setText(_translate("MainWindow", "License"))
         self.actionAbout.setText(_translate("MainWindow", "About"))
+        self.actionExit.setText(_translate("MainWindow", "Exit"))
 
 
 if __name__ == "__main__":
