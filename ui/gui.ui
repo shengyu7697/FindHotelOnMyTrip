@@ -20,7 +20,7 @@
       <item>
        <layout class="QGridLayout" name="gridLayout_1">
         <item row="1" column="1">
-         <widget class="QLineEdit" name="checkInLineEdit">
+         <widget class="QLineEdit" name="lineEditCheckIn">
           <property name="text">
            <string>2019-02-22</string>
           </property>
@@ -41,7 +41,7 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QComboBox" name="roomsComboBox">
+         <widget class="QComboBox" name="comboBoxRooms">
           <item>
            <property name="text">
             <string>1</string>
@@ -75,7 +75,7 @@
          </widget>
         </item>
         <item row="1" column="3">
-         <widget class="QLineEdit" name="checkOutLineEdit">
+         <widget class="QLineEdit" name="lineEditCheckOut">
           <property name="text">
            <string>2019-02-24</string>
           </property>
@@ -89,14 +89,14 @@
          </widget>
         </item>
         <item row="2" column="4">
-         <widget class="QLabel" name="label_5">
+         <widget class="QLabel" name="label_6">
           <property name="text">
            <string>Childs</string>
           </property>
          </widget>
         </item>
         <item row="2" column="5">
-         <widget class="QComboBox" name="childsComboBox">
+         <widget class="QComboBox" name="comboBoxChilds">
           <item>
            <property name="text">
             <string>0</string>
@@ -135,7 +135,7 @@
          </widget>
         </item>
         <item row="2" column="3">
-         <widget class="QComboBox" name="adultsComboBox">
+         <widget class="QComboBox" name="comboBoxAdults">
           <property name="currentIndex">
            <number>1</number>
           </property>
@@ -185,24 +185,24 @@
          </spacer>
         </item>
         <item row="2" column="0">
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="label_4">
           <property name="text">
            <string>Rooms</string>
           </property>
          </widget>
         </item>
         <item row="0" column="6">
-         <widget class="QPushButton" name="addButton">
+         <widget class="QPushButton" name="buttonAdd">
           <property name="text">
            <string>Add</string>
           </property>
          </widget>
         </item>
         <item row="0" column="1" colspan="5">
-         <widget class="QLineEdit" name="hotelLineEdit"/>
+         <widget class="QLineEdit" name="lineEditHotel"/>
         </item>
         <item row="2" column="2">
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="label_5">
           <property name="text">
            <string>Adults</string>
           </property>
@@ -336,14 +336,14 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QPushButton" name="deleteButton">
+           <widget class="QPushButton" name="buttonDelete">
             <property name="text">
              <string>Delete</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="clearButton">
+           <widget class="QPushButton" name="buttonClear">
             <property name="text">
              <string>Clear</string>
             </property>
@@ -369,7 +369,7 @@
       <item>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="2">
-         <widget class="QPushButton" name="searchButton">
+         <widget class="QPushButton" name="buttonSearch">
           <property name="text">
            <string>Search</string>
           </property>
@@ -389,7 +389,7 @@
          </spacer>
         </item>
         <item row="0" column="1">
-         <widget class="QPushButton" name="exitButton">
+         <widget class="QPushButton" name="buttonExit">
           <property name="text">
            <string>Exit</string>
           </property>

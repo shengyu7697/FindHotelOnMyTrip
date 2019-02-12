@@ -23,12 +23,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.setMenuAction()
         self.setConnections()
-        self.setCompleter(self.ui.hotelLineEdit)
+        self.setCompleter(self.ui.lineEditHotel)
         self.initTable()
 
         self.rowcount = 0
         self.ui.tableWidget.setRowCount(0)
-        self.ui.searchButton.setEnabled(False)
+        self.ui.buttonSearch.setEnabled(False)
 
         self.show()
 
@@ -44,11 +44,11 @@ class MainWindow(QtWidgets.QMainWindow):
         QtWidgets.QMessageBox.information(self, 'About', '')
 
     def setConnections(self):
-        self.ui.addButton.clicked.connect(self.addBtnEvent)
-        self.ui.deleteButton.clicked.connect(self.deleteBtnEvent)
-        self.ui.clearButton.clicked.connect(self.clearBtnEvent)
-        self.ui.searchButton.clicked.connect(self.searchBtnEvent)
-        self.ui.exitButton.clicked.connect(self.close)
+        self.ui.buttonAdd.clicked.connect(self.addBtnEvent)
+        self.ui.buttonDelete.clicked.connect(self.deleteBtnEvent)
+        self.ui.buttonClear.clicked.connect(self.clearBtnEvent)
+        self.ui.buttonSearch.clicked.connect(self.searchBtnEvent)
+        self.ui.buttonExit.clicked.connect(self.close)
 
     def setCompleter(self, lineEdit):
         self.getHotelData()
@@ -136,13 +136,13 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def addBtnEvent(self):
         print('addBtnEvent')
-        hotel_name = self.ui.hotelLineEdit.text()
-        start_date = self.ui.checkInLineEdit.text()
-        end_date = self.ui.checkOutLineEdit.text()
-        city = self.searchHotelCity(self.ui.hotelLineEdit.text())
-        rooms = self.ui.roomsComboBox.currentText()
-        adults = self.ui.adultsComboBox.currentText()
-        childs = self.ui.childsComboBox.currentText()
+        hotel_name = self.ui.lineEditHotel.text()
+        start_date = self.ui.lineEditCheckIn.text()
+        end_date = self.ui.lineEditCheckOut.text()
+        city = self.searchHotelCity(self.ui.lineEditHotel.text())
+        rooms = self.ui.comboBoxRooms.currentText()
+        adults = self.ui.comboBoxAdults.currentText()
+        childs = self.ui.comboBoxChilds.currentText()
 
         self.insertTable(self.rowcount, hotel_name, \
                          start_date, end_date, \
@@ -151,7 +151,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.tableWidget.selectRow(self.rowcount)
         #self.ui.tableWidget.verticalScrollBar().setSliderPosition(self.ui.tableWidget.verticalScrollBar().maximum())
         self.rowcount += 1
-        self.ui.searchButton.setEnabled(True)
+        self.ui.buttonSearch.setEnabled(True)
 
     def deleteBtnEvent(self):
         if (self.rowcount > 0):
@@ -159,12 +159,12 @@ class MainWindow(QtWidgets.QMainWindow):
             self.rowcount -= 1
 
         if (self.rowcount == 0):
-            self.ui.searchButton.setEnabled(False)
+            self.ui.buttonSearch.setEnabled(False)
 
     def clearBtnEvent(self):
         self.ui.tableWidget.setRowCount(0)
         self.rowcount = 0
-        self.ui.searchButton.setEnabled(False)
+        self.ui.buttonSearch.setEnabled(False)
 
     def searchBtnEvent(self):
         print('searchBtnEvent')
