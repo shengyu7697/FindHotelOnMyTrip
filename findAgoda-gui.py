@@ -56,6 +56,7 @@ class MainWindow(QtWidgets.QMainWindow):
         model.setStringList(self.hotelStringList)
         completer = QCompleter()
         completer.setModel(model)
+        completer.setFilterMode(QtCore.Qt.MatchContains)
         lineEdit.setCompleter(completer)
 
     def getHotelData(self):
