@@ -44,10 +44,10 @@ class MainWindow(QtWidgets.QMainWindow):
         QtWidgets.QMessageBox.information(self, 'About', '')
 
     def setConnections(self):
-        self.ui.buttonAdd.clicked.connect(self.addBtnEvent)
-        self.ui.buttonDelete.clicked.connect(self.deleteBtnEvent)
-        self.ui.buttonClear.clicked.connect(self.clearBtnEvent)
-        self.ui.buttonSearch.clicked.connect(self.searchBtnEvent)
+        self.ui.buttonAdd.clicked.connect(self.buttonAddEvent)
+        self.ui.buttonDelete.clicked.connect(self.buttonDeleteEvent)
+        self.ui.buttonClear.clicked.connect(self.buttonClearEvent)
+        self.ui.buttonSearch.clicked.connect(self.buttonSearchEvent)
         self.ui.buttonExit.clicked.connect(self.close)
 
     def setCompleter(self, lineEdit):
@@ -135,8 +135,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.tableWidget.setItem(i, 6, QTableWidgetItem(adults))
         self.ui.tableWidget.setItem(i, 7, QTableWidgetItem(childs))
 
-    def addBtnEvent(self):
-        print('addBtnEvent')
+    def buttonAddEvent(self):
+        print('buttonAddEvent')
         hotel_name = self.ui.lineEditHotel.text()
         start_date = self.ui.lineEditCheckIn.text()
         end_date = self.ui.lineEditCheckOut.text()
@@ -154,7 +154,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.rowcount += 1
         self.ui.buttonSearch.setEnabled(True)
 
-    def deleteBtnEvent(self):
+    def buttonDeleteEvent(self):
         if (self.rowcount > 0):
             self.ui.tableWidget.removeRow(self.ui.tableWidget.currentRow())
             self.rowcount -= 1
@@ -162,13 +162,13 @@ class MainWindow(QtWidgets.QMainWindow):
         if (self.rowcount == 0):
             self.ui.buttonSearch.setEnabled(False)
 
-    def clearBtnEvent(self):
+    def buttonClearEvent(self):
         self.ui.tableWidget.setRowCount(0)
         self.rowcount = 0
         self.ui.buttonSearch.setEnabled(False)
 
-    def searchBtnEvent(self):
-        print('searchBtnEvent')
+    def buttonSearchEvent(self):
+        print('buttonSearchEvent')
         for i in range(self.ui.tableWidget.rowCount()):
             hotel_name = self.searchHotelUrl(self.ui.tableWidget.item(i, 0).text())
             start_date = self.ui.tableWidget.item(i, 1).text()
