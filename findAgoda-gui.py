@@ -30,6 +30,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.tableWidget.setRowCount(0)
         self.ui.buttonSearch.setEnabled(False)
 
+        self.move(100, 100)
         self.show()
 
     def setMenuAction(self):
