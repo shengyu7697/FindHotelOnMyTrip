@@ -137,6 +137,10 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def buttonAddEvent(self):
         print('buttonAddEvent')
+        if (self.ui.lineEditHotel.text() == ''):
+            QtWidgets.QMessageBox.critical(self, 'Error', 'hotel is empty.')
+            return
+        self.ui.statusbar.showMessage('Add')
         hotel_name = self.ui.lineEditHotel.text()
         start_date = self.ui.lineEditCheckIn.text()
         end_date = self.ui.lineEditCheckOut.text()
@@ -155,7 +159,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.buttonSearch.setEnabled(True)
 
     def buttonDeleteEvent(self):
+        print('buttonDeleteEvent')
         if (self.rowcount > 0):
+            self.ui.statusbar.showMessage('Delete item ' + str(self.ui.tableWidget.currentRow()+1))
             self.ui.tableWidget.removeRow(self.ui.tableWidget.currentRow())
             self.rowcount -= 1
 
@@ -163,12 +169,15 @@ class MainWindow(QtWidgets.QMainWindow):
             self.ui.buttonSearch.setEnabled(False)
 
     def buttonClearEvent(self):
+        print('buttonClearEvent')
+        self.ui.statusbar.showMessage('Clear')
         self.ui.tableWidget.setRowCount(0)
         self.rowcount = 0
         self.ui.buttonSearch.setEnabled(False)
 
     def buttonSearchEvent(self):
         print('buttonSearchEvent')
+        self.ui.statusbar.showMessage('Search')
         for i in range(self.ui.tableWidget.rowCount()):
             hotel_name = self.searchHotelUrl(self.ui.tableWidget.item(i, 0).text())
             start_date = self.ui.tableWidget.item(i, 1).text()
